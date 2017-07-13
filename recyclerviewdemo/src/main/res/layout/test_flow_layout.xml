@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.feng.recyclerviewdemo.viewgroup.FlowLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--<TextView
+            style="@style/FlowText"
+            android:text="Android"/>
+
+        <TextView
+            style="@style/FlowText"
+            android:text="IT攻城狮"/>
+
+        <TextView
+            style="@style/FlowText"
+            android:text="程序猿"/>
+
+        <TextView
+            style="@style/FlowText"
+            android:text="Java"/>
+
+        <TextView
+            style="@style/FlowText"
+            android:text="Android Studio"/>-->
+
+<!--        <TextView
+            style="@style/FlowText"
+            android:text="这是一个长文本显示在这里"/>
+
+        <TextView
+            style="@style/FlowText"
+            android:text="学习FlowLayout"/>
+
+        <TextView
+            style="@style/FlowText"
+            android:text="如果他足够长"/>
+
+        <TextView
+            style="@style/FlowText"
+            android:text="他已经很长了，足够占据一行的空间，测试一行的空间1"
+            android:textColor="#f00"/>-->
+
+        <TextView
+            style="@style/FlowText"
+            android:text="他已经很长了，足够占据一行的空间，测试一行的空间2，这一行太长了，已至于都显示不全"
+            android:textColor="#f00"/>
+    </com.feng.recyclerviewdemo.viewgroup.FlowLayout>
+
+</LinearLayout>
