@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">RecyclerViewDemo</string>
+
+    <array name="flow_tag">
+        <item>Android</item>
+        <item>iOS</item>
+        <item>Java</item>
+        <item>C#</item>
+        <item>C/C++</item>
+        <item>JavaScript</item>
+        <item>Visual Basic .NET</item>
+        <item>GO</item>
+        <item>这一行需要单独占一行，这要怎么显示1</item>
+        <item>这一行需要单独占一行，这要怎么显示2</item>
+        <item>这一行需要单独占一行，这要怎么显示3</item>
+        <item>这一行需要单独占一行，这要怎么显示4</item>
+        <item>这一行需要单独占一行，这要怎么显示5</item>
+        <item>这一行需要单独占一行，这要怎么显示6</item>
+        <item>这一行需要单独占一行，这要怎么显示7</item>
+        <item>这一行需要单独占一行，这要怎么显示8</item>
+        <item>这一行很长，以至于一行都显示不完，需要换行才可以显示，这个会怎么显示</item>
+    </array>
 </resources>

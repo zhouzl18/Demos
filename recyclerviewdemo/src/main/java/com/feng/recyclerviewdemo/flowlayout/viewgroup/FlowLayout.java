@@ -1,4 +1,4 @@
-package com.feng.recyclerviewdemo.viewgroup;
+package com.feng.recyclerviewdemo.flowlayout.viewgroup;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -105,12 +105,13 @@ public class FlowLayout extends ViewGroup{
                 //创建新行
                 lineViews = new ArrayList<>();
                 //添加行高
-                mLineHeightList.add(childHeight);
+                mLineHeightList.add(lineHeight);
 
                 //记录最大宽度
                 width = Math.max(lineWidth, childWidth);
                 //叠加高度
                 height += lineHeight;
+
 
                 //记录新的一行的宽度
                 lineWidth = childWidth;

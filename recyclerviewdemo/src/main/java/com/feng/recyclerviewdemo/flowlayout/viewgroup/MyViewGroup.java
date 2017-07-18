@@ -1,4 +1,4 @@
-package com.feng.recyclerviewdemo.viewgroup;
+package com.feng.recyclerviewdemo.flowlayout.viewgroup;
 
 import android.annotation.TargetApi;
 import android.content.Context;

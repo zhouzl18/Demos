@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.feng.recyclerviewdemo.viewgroup.FlowLayout
+    <com.feng.recyclerviewdemo.flowlayout.viewgroup.FlowLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#ccc">
 
-        <!--<TextView
+        <TextView
             style="@style/FlowText"
             android:text="Android"/>
 
@@ -26,9 +27,9 @@
 
         <TextView
             style="@style/FlowText"
-            android:text="Android Studio"/>-->
+            android:text="Android Studio"/>
 
-<!--        <TextView
+        <TextView
             style="@style/FlowText"
             android:text="这是一个长文本显示在这里"/>
 
@@ -43,12 +44,12 @@
         <TextView
             style="@style/FlowText"
             android:text="他已经很长了，足够占据一行的空间，测试一行的空间1"
-            android:textColor="#f00"/>-->
+            android:textColor="#f00"/>
 
         <TextView
             style="@style/FlowText"
             android:text="他已经很长了，足够占据一行的空间，测试一行的空间2，这一行太长了，已至于都显示不全"
             android:textColor="#f00"/>
-    </com.feng.recyclerviewdemo.viewgroup.FlowLayout>
+    </com.feng.recyclerviewdemo.flowlayout.viewgroup.FlowLayout>
 
 </LinearLayout>
