@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.feng.recyclerviewdemo.flowlayout.viewgroup.FlowLayout
+    <com.feng.recyclerviewdemo.view.flowlayout.viewgroup.FlowLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#ccc">
@@ -50,6 +50,6 @@
             style="@style/FlowText"
             android:text="他已经很长了，足够占据一行的空间，测试一行的空间2，这一行太长了，已至于都显示不全"
             android:textColor="#f00"/>
-    </com.feng.recyclerviewdemo.flowlayout.viewgroup.FlowLayout>
+    </com.feng.recyclerviewdemo.view.flowlayout.viewgroup.FlowLayout>
 
 </LinearLayout>

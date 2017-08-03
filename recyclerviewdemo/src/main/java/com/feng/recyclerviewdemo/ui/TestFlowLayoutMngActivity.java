@@ -6,7 +6,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.feng.recyclerviewdemo.R;
 import com.feng.recyclerviewdemo.adapter.FlowLayoutAdapter;
-import com.feng.recyclerviewdemo.flowlayout.layoutmanager.FlowLayoutManager;
+import com.feng.recyclerviewdemo.view.flowlayout.layoutmanager.FlowLayoutManager;
 
 import java.util.ArrayList;
 import java.util.Arrays;

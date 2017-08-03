@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.feng.recyclerviewdemo.flowlayout.viewgroup.MyViewGroup
+    <com.feng.recyclerviewdemo.view.flowlayout.viewgroup.MyViewGroup
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:background="#AA333333"
@@ -58,6 +58,6 @@
             android:textSize="22sp"
             android:textStyle="bold" />
 
-    </com.feng.recyclerviewdemo.flowlayout.viewgroup.MyViewGroup>
+    </com.feng.recyclerviewdemo.view.flowlayout.viewgroup.MyViewGroup>
 
 </LinearLayout>

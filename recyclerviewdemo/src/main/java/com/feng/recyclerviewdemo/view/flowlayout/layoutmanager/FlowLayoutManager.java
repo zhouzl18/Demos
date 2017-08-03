@@ -1,4 +1,4 @@
-package com.feng.recyclerviewdemo.flowlayout.layoutmanager;
+package com.feng.recyclerviewdemo.view.flowlayout.layoutmanager;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

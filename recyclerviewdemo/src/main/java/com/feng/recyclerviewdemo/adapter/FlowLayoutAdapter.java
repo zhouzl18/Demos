@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.feng.recyclerviewdemo.R;
-import com.feng.recyclerviewdemo.flowlayout.layoutmanager.FlowLayoutManager;
 
 import java.util.List;
 
