@@ -7,7 +7,9 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Build;
-import android.support.annotation.NonNull;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -75,6 +77,41 @@ public class CountDownView extends View{
     private String text = "";
     private String[] splitText = {};
 
+    private Handler spinHandler = new Handler() {
+        /**
+         * This is the code that will increment the progress variable
+         * and so spin the wheel
+         */
+        @Override
+        public void handleMessage(Message msg) {
+            invalidate();
+            if (isSpinning) {
+                progress += spinSpeed;
+                if (progress > 360) {
+                    progress = 0;
+                }
+                spinHandler.sendEmptyMessageDelayed(0, delayMillis);
+            }
+            //super.handleMessage(msg);
+        }
+    };
+
+    private long millsInFuture = 5000;
+    private long countDownInterval = 100;
+    private long count = millsInFuture / countDownInterval;
+
+    private CountDownTimer timer = new CountDownTimer(millsInFuture, countDownInterval) {
+        @Override
+        public void onTick(long millisUntilFinished) {
+            long curCount = millisUntilFinished / countDownInterval;
+        }
+
+        @Override
+        public void onFinish() {
+
+        }
+    };
+
 
     public CountDownView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -138,7 +175,19 @@ public class CountDownView extends View{
         canvas.drawArc(circleOuterContour, 0, 360, false, contourPaint);
 
         if(isSpinning){
+            canvas.drawArc(circleBounds, progress - 90, barLength, false, barPaint);
+        }else{
+            canvas.drawArc(circleBounds, -90, progress, false, barPaint);
+        }
 
+        //Draw the text (attempts to center it horizontally and vertically)
+        float textHeight = textPaint.descent() - textPaint.ascent();
+        float verticalTextOffset = (textHeight / 2) - textPaint.descent();
+
+        for (String s : splitText) {
+            float horizontalTextOffset = textPaint.measureText(s) / 2;
+            canvas.drawText(s, this.getWidth() / 2 - horizontalTextOffset,
+                    this.getHeight() / 2 + verticalTextOffset, textPaint);
         }
     }
 
@@ -268,6 +317,51 @@ public class CountDownView extends View{
         splitText = this.text.split("\n");
     }
 
+    /**
+     * Turn off spin mode
+     */
+    public void stopSpinning() {
+        isSpinning = false;
+        progress = 0;
+        spinHandler.removeMessages(0);
+    }
 
+
+    /**
+     * Puts the view on spin mode
+     */
+    public void startSpinning() {
+        isSpinning = true;
+        spinHandler.sendEmptyMessage(0);
+    }
+
+    /**
+     * Set the progress to a specific value
+     */
+    public void setProgress(int i) {
+        isSpinning = false;
+        progress = i;
+        spinHandler.sendEmptyMessage(0);
+    }
+
+    public void setMillsInFuture(long millsInFuture) {
+        this.millsInFuture = millsInFuture;
+    }
+
+    public void setCountDownInterval(long countDownInterval) {
+        if(countDownInterval <= 0){
+            this.countDownInterval = 1;
+        }else{
+            this.countDownInterval = countDownInterval;
+        }
+    }
+
+    public void start(){
+        timer.start();
+    }
+
+    public void cancel(){
+        timer.cancel();
+    }
 
 }

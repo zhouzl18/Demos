@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:CountDownWheel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.feng.recyclerviewdemo.view.CountDownView
+        android:id="@+id/count_down_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        CountDownWheel:text="12"
+        CountDownWheel:textColor="#ff0000"
+        CountDownWheel:textSize="20sp"
+        CountDownWheel:rimColor="#FF99EB"
+        CountDownWheel:rimWidth="2dp"
+        CountDownWheel:contourColor="#FFD400"
+        CountDownWheel:contourSize="4dp"
+        CountDownWheel:circleColor="#00FF33"
+        CountDownWheel:barColor="#0000aa"
+        CountDownWheel:barWidth="20dp"
+        />
+
+</LinearLayout>
